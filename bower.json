@@ -1,0 +1,30 @@
+{
+  "name": "backbone.marionette-plupload-module",
+  "description": "Plupload module",
+  "version": "0.0.1",
+  "directory": "backbone.marionette-pl-uploader",
+  "keywords": [
+    "backbone",
+    "marionette",
+    "plupload",
+    "requirejs",
+    "underscorejs",
+    "jquery",
+    "uploader",
+    "javacript",
+    "front-end",
+    "web",
+    "development"
+  ],
+  "homepage": "https://github.com/denar90/backbone.marionette-plupload-module",
+  "authors": [
+    "Denysov Artem"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "marionette": "2.4.1",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "handlebars": "3.0.3"
+  }
+}
