@@ -145,4 +145,3 @@ All available [settings for plupload](http://www.plupload.com/docs/).
 * type: Object
 
 All available [events for plupload](https://github.com/moxiecode/plupload/wiki/Uploader#events).
-
