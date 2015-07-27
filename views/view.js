@@ -6,7 +6,7 @@
  * @exports plUploader/templates/template
  *
  * @author Denysov Artem
- * @link hhttps://github.com/denar90
+ * @link https://github.com/denar90
  */
 
 define(['app',

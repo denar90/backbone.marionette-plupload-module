@@ -4,7 +4,7 @@
  * @exports plUploader/controllers/controller
  *
  * @author Denysov Artem
- * @link hhttps://github.com/denar90
+ * @link https://github.com/denar90
  */
 
 define(['app', 'plUploader/controllers/controller'], function(App, Controller) {
