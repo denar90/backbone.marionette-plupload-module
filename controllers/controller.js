@@ -4,7 +4,7 @@
  * @exports plUploader/views/view
  *
  * @author Denysov Artem
- * @link hhttps://github.com/denar90
+ * @link https://github.com/denar90
  */
 
 define(['app', 'plUploader/views/view'], function(App, View) {
