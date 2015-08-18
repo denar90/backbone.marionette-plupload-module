@@ -18,16 +18,19 @@
     "development"
   ],
   "homepage": "https://github.com/denar90/backbone.marionette-plupload-module",
-  "authors": [{
-      "name": "Denysov Artem",
-      "email": "denysov.artem@gmail.com"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denar90/backbone.marionette-plupload-module"
+  },
+  "contributors": [{
+    "name":  "Denysov Artem",
+    "email": "denysov.artem@gmail.com"
   }],
-
-  "license": "MIT",
   "dependencies": {
-    "marionette": "2.4.1",
+    "backbone.marionette": "2.4.2",
     "requirejs": "latest",
     "requirejs-text": "latest",
     "handlebars": "3.0.3"
-  }
+  },
+  "license": "MIT"
 }
