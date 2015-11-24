@@ -22,12 +22,15 @@
     "type": "git",
     "url": "https://github.com/denar90/backbone.marionette-plupload-module"
   },
-  "contributors": [{
-    "name":  "Denysov Artem",
-    "email": "denysov.artem@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Denysov Artem",
+      "email": "denysov.artem@gmail.com"
+    }
+  ],
   "dependencies": {
-    "backbone.marionette": "2.4.4"
+    "gulp": "^3.9.0",
+    "gulp-rigger": "^0.5.8"
   },
   "license": "MIT"
 }
