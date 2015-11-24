@@ -1,7 +1,7 @@
 {
   "name": "backbone.marionette-plupload-module",
   "description": "Plupload module for backbone marionette js",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "directory": "backbone.marionette-pl-uploader",
   "keywords": [
     "backbone",
@@ -25,9 +25,6 @@
 
   "license": "MIT",
   "dependencies": {
-    "marionette": "2.4.1",
-    "requirejs": "latest",
-    "requirejs-text": "latest",
-    "handlebars": "3.0.3"
+    "marionette": "2.4.4"
   }
 }

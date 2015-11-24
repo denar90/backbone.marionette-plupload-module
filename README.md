@@ -9,58 +9,6 @@
 
 ##Usage
 
-###Configuration
-
-* Configure your requirejs file for Core API
-````javascript
-	require.config({
-    	...
-    	paths: {
-    		...
-    		app: 'path-to-app-file',
-    		plupload   : '../vendor/plupload/js/plupload.full.min'
-    		...
-    	}
-    	...
-    });
-````
-
-* Configure your requirejs file for UI Widget
-````javascript
-	require.config({
-    	...
-    	paths: {
-    		...
-    		app: 'path-to-app-file',
-    		plupload: '../vendor/plupload/js/plupload.full.min',
-    		pluploadUI: '../vendor/plupload/js/jquery.ui.plupload/jquery.ui.plupload'
-    		...
-    	},
-    	...
-    	shim: {
-			...
-			pluploadUI: {
-				deps: ['path_to_jquery', 'path_to_jquery-ui']
-			}
-			...
-		}
-    });
-````
-
-* Configure your requirejs file for Queue Widget
-````javascript
-	require.config({
-    	...
-    	paths: {
-    		...
-    		app: 'path-to-app-file',
-    		plupload: '../vendor/plupload/js/plupload.full.min',
-			pluploadQueue: '../vendor/plupload/js/jquery.plupload.queue/jquery.plupload.queue',
-    		...
-    	}
-    });
-````
-
 ###Initialization
 
 * Include and run module
@@ -68,27 +16,50 @@
 ````javascript
 	//for example
 	
-	define(['app', 'plUploader/plUploader'], function(App, PlUploader) {
-	
-		App.addRegions({
-			plUploaderRegion: '#someregion'
-		});
-        	
-    	...
-		PlUploader.start({
-			region: App.plUploaderRegion,
-			plupload: {
-				pluploadType: 'core',
+	var MyView = Marionette.ItemView.extend({
+		template: '<div></div>',
+		onShow: function() {
+			new Marionette.PlUploader(this, {
+				pluploadType: 'queue',
 				settings: {
-					browse_button: 'browse', // this can be an id of a DOM element or the DOM element itself
-					url: 'upload.php'
+					runtimes : 'html5,flash,silverlight,html4',
+					url : "/examples/upload",
+
+					chunk_size : '1mb',
+					rename : true,
+					dragdrop: true,
+
+					filters : {
+						// Maximum file size
+						max_file_size : '10mb',
+						// Specify what files to browse for
+						mime_types: [
+							{title : "Image files", extensions : "jpg,gif,png"},
+							{title : "Zip files", extensions : "zip"}
+						]
+					},
+
+					// Resize images on clientside if we can
+					resize: {
+						width : 200,
+						height : 200,
+						quality : 90,
+						crop: true // crop to exact dimensions
+					},
+
+
+					// Flash settings
+					flash_swf_url : '/plupload/js/Moxie.swf',
+
+					// Silverlight settings
+					silverlight_xap_url : '/plupload/js/Moxie.xap'
 				},
 				callbacks: {
 					Browse: function() {
-						console.log('upload Browse')
+						console.log('upload Browse');
 					},
 					Error: function() {
-						console.log('upload error')
+						console.log('upload error');
 					},
 					FilesAdded: function(up, files) {
 						var html = '';
@@ -99,21 +70,14 @@
 						up.start();
 					}
 				}
-			}
-		});
-		...
-    	
-    });
+			});
+		}
+	});
+
+	app.mainRegion.show(new MyView());
 ````
 
 ##Options
-
-#### region
-* type: Object
-
-Required param.
-
-Region where data will be inserted
 
 #### plupload
 * type: Object
@@ -141,7 +105,7 @@ Type of plupload can have be: `core`, `ui`, `queue`
 
 All available [settings for plupload](http://www.plupload.com/docs/).
 
-#### plupload.settings
+#### plupload.callbacks
 * type: Object
 
 All available [events for plupload](https://github.com/moxiecode/plupload/wiki/Uploader#events).
