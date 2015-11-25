@@ -79,33 +79,28 @@
 
 ##Options
 
-#### plupload
-* type: Object
-
-````javascript
-	
-	plupload: {
-		pluploadType: '',
-		settings: {},
-		callbacks: {}
-	}
-		
-````
-
 Options for plupload
 
-#### plupload.pluploadType
+#### pluploadType
 * type: String
 * default: 'core'
 
 Type of plupload can have be: `core`, `ui`, `queue`
 
-#### plupload.settings
+#### pluploadContainer
+* type: String
+* default: '#plupload-container'
+
+#### template
+* type: string
+* default: '<div id="plupload-container"></div>'
+
+#### settings
 * type: Object
 
 All available [settings for plupload](http://www.plupload.com/docs/).
 
-#### plupload.callbacks
+#### callbacks
 * type: Object
 
 All available [events for plupload](https://github.com/moxiecode/plupload/wiki/Uploader#events).
