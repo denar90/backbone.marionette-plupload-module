@@ -93,7 +93,8 @@ Type of plupload can have be: `core`, `ui`, `queue`
 
 #### template
 * type: string
-* default: '<div id="plupload-container"></div>'
+
+Default template - `<div id="plupload-container"></div>`
 
 #### settings
 * type: Object
