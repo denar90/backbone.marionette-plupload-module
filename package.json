@@ -1,8 +1,16 @@
 {
   "name": "backbone.marionette-plupload-module",
   "description": "Plupload module for backbone marionette js",
-  "version": "0.1.1",
+  "author": "denar90",
+  "version": "0.1.2",
   "directory": "backbone.marionette-pl-uploader",
+  "main": [
+    "dist/marionette.pluploader.amd.js",
+    "dsit/marionette.pluploader.js"
+  ],
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build"
+  },
   "keywords": [
     "backbone",
     "marionette",
@@ -22,13 +30,7 @@
     "type": "git",
     "url": "https://github.com/denar90/backbone.marionette-plupload-module"
   },
-  "contributors": [
-    {
-      "name": "Denysov Artem",
-      "email": "denysov.artem@gmail.com"
-    }
-  ],
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-rigger": "^0.5.8"
   },
