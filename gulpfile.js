@@ -1,10 +1,9 @@
 var gulp = require('gulp');
 var rigger = require('gulp-rigger');
-var clean = require('gulp-clean');
+var rimraf = require('gulp-rimraf');
 
 gulp.task('build', function () {
 	gulp.src('src/*.js')
-		.pipe(clean())
 		.pipe(rigger())
 		.pipe(gulp.dest('dist/'));
 });

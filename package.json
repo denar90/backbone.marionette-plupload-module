@@ -32,8 +32,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-rigger": "^0.5.8",
-    "gulp-clean": "^0.3.1"
+    "gulp-rigger": "^0.5.8"
   },
   "license": "MIT"
 }

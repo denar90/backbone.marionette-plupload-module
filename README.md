@@ -1,11 +1,10 @@
-#Marionette module for plupload
+#Marionette module for plupload [![Build Status](https://travis-ci.org/denar90/backbone.marionette-plupload-module.svg?branch=master)](https://travis-ci.org/denar90/backbone.marionette-plupload-module)
 
 ##Getting started
 
 ###Quick start
 
 * Clone the repository: `https://github.com/denar90/backbone.marionette-plupload-module`
-* Add dependency into your `bower.json` file and run `bower install`
 
 ##Usage
 
