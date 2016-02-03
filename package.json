@@ -27,6 +27,9 @@
     "type": "git",
     "url": "https://github.com/denar90/backbone.marionette-plupload-module"
   },
+  "dependencies": {
+    "backbone.marionette": "^2.4.4"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-rigger": "^0.5.8"
