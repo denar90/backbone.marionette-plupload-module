@@ -5,6 +5,7 @@
 ###Quick start
 
 * Clone the repository: `https://github.com/denar90/backbone.marionette-plupload-module`
+* `npm install backbone.marionette-plupload-module`
 
 ##Usage
 
