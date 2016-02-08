@@ -4,7 +4,7 @@
   "author": "denar90",
   "version": "0.1.2",
   "directory": "backbone.marionette-pl-uploader",
-  "main": "dsit/marionette.pluploader.js",
+  "main": "dist/marionette.pluploader.js",
   "scripts": {
     "build": "./node_modules/.bin/gulp build"
   },
